@@ -8,7 +8,7 @@ class App extends React.Component {
       <div>
         <h1>Star Wars Characters</h1>
         <SearchContainer />
-        {/* <CharacterResultsContainer /> */}
+        <CharacterResultsContainer />
       </div>
     )
   }

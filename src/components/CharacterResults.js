@@ -1,12 +1,12 @@
 import React from "react";
 
 function CharacterResults({result}) {
-  console.log(result)
+
   return (
     <div>
       <ul>
         {result.map(character => (
-          
+          console.log(character)
             <li key={character.name}>
             <h2>{character.name}</h2>
             <img src={character.image}/>
