@@ -1,13 +1,20 @@
 import React from "react";
 
-function Search({ query, handleChange, submitQuery }) {
-
+function Search({ selectedQuery, handleChange, submitSearch }) {
   return (
-    <form className="search_box" onSubmit={submitQuery}>
-      <input type="search" onChange={handleChange} />
+    <form
+      className="search_box"
+      onSubmit={event => {
+        event.preventDefault();
+        submitSearch(event, selectedQuery)}}
+    >
+      <input
+        type="search"
+        onChange={event => handleChange(event.target.value)}
+        value={selectedQuery}
+      />
     </form>
   );
-
 }
 
 export default Search;

@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import Search from  "../components/Search";
-import { setQuery } from "../actions"
+import { setQuery, submitQuery } from "../actions"
 
 const mapStateToProps = state => {
     return {
@@ -10,9 +10,14 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        handleChange: event => {
-            console.log(event.target.value);
-            dispatch(setQuery(event.target.value))
+        handleChange: (searchString) => {
+            console.log(searchString);
+            dispatch(setQuery(searchString))},
+        
+        submitSearch: (event, searchString) => {
+           
+            
+            dispatch(submitQuery(searchString))
         }
     }
 }

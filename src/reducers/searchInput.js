@@ -2,7 +2,7 @@ function searchInput(state = { query: "" }, action) {
   switch (action.type) {
     case "SET_QUERY":
       const stateQueryUpdated = Object.assign({}, state, {
-        query: action.query
+        selectedQuery: action.selectedQuery
       });
       return stateQueryUpdated;
     default:
